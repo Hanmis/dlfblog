@@ -1,0 +1,30 @@
+2012/12/03 12:15:29 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/home/hliu/Downloads/我的资料/zhku/dlfblog/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /home/hliu/Downloads/我的资料/zhku/dlfblog/framework/web/CAssetManager.php:128
+Stack trace:
+#0 /home/hliu/Downloads/我的资料/zhku/dlfblog/framework/web/CAssetManager.php(113): CAssetManager->setBasePath('/home/hliu/Down...')
+#1 /home/hliu/Downloads/我的资料/zhku/dlfblog/framework/web/CAssetManager.php(235): CAssetManager->getBasePath()
+#2 /home/hliu/Downloads/我的资料/zhku/dlfblog/framework/zii/widgets/CListView.php(188): CAssetManager->publish('/home/hliu/Down...')
+#3 /home/hliu/Downloads/我的资料/zhku/dlfblog/framework/web/CBaseController.php(148): CListView->init()
+#4 /home/hliu/Downloads/我的资料/zhku/dlfblog/framework/web/CBaseController.php(173): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#5 /home/hliu/Downloads/我的资料/zhku/dlfblog/themes/classic/views/post/index.php(17): CBaseController->widget('zii.widgets.CLi...', Array)
+#6 /home/hliu/Downloads/我的资料/zhku/dlfblog/framework/web/CBaseController.php(127): require('/home/hliu/Down...')
+#7 /home/hliu/Downloads/我的资料/zhku/dlfblog/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/hliu/Down...', Array, true)
+#8 /home/hliu/Downloads/我的资料/zhku/dlfblog/framework/web/CController.php(870): CBaseController->renderFile('/home/hliu/Down...', Array, true)
+#9 /home/hliu/Downloads/我的资料/zhku/dlfblog/framework/web/CController.php(783): CController->renderPartial('index', Array, true)
+#10 /home/hliu/Downloads/我的资料/zhku/dlfblog/protected/controllers/PostController.php(161): CController->render('index', Array)
+#11 /home/hliu/Downloads/我的资料/zhku/dlfblog/framework/web/actions/CInlineAction.php(50): PostController->actionIndex()
+#12 /home/hliu/Downloads/我的资料/zhku/dlfblog/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /home/hliu/Downloads/我的资料/zhku/dlfblog/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 /home/hliu/Downloads/我的资料/zhku/dlfblog/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#15 /home/hliu/Downloads/我的资料/zhku/dlfblog/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#16 /home/hliu/Downloads/我的资料/zhku/dlfblog/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#17 /home/hliu/Downloads/我的资料/zhku/dlfblog/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 /home/hliu/Downloads/我的资料/zhku/dlfblog/framework/web/CController.php(292): CFilterChain->run()
+#19 /home/hliu/Downloads/我的资料/zhku/dlfblog/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /home/hliu/Downloads/我的资料/zhku/dlfblog/framework/web/CWebApplication.php(283): CController->run('index')
+#21 /home/hliu/Downloads/我的资料/zhku/dlfblog/framework/web/CWebApplication.php(142): CWebApplication->runController('post/index')
+#22 /home/hliu/Downloads/我的资料/zhku/dlfblog/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#23 /home/hliu/Downloads/我的资料/zhku/dlfblog/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/dlfblog/
+HTTP_REFERER=http://localhost:81/
+---
