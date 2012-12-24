@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #DLFBLOG 1.0
 
 ##基于Yii 框架开发的博客！ 
@@ -77,3 +78,9 @@ POSSIBILITY OF SUCH DAMAGE.
 
 
 
+=======
+dlfblog
+=======
+
+this is a demo
+>>>>>>> 0382b7a39c8b51a5f681b3f8ea11190bb8b69175

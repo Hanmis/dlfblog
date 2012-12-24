@@ -56,9 +56,10 @@ return array(
         ),
             
 		// uncomment the following to enable URLs in path-format
+		
 		'urlManager'=>array(
 			'urlFormat'=>'path',
-            'showScriptName' => false,
+            'showScriptName' => false,  //隐藏index.php
 			'rules'=>array(
 				'view/<controller:\w+>-<title:.*?>-<id:\d+>'=>'<controller>/view',
                 'tags/<tag:.*?>'=>'post/index',
@@ -67,7 +68,7 @@ return array(
                 '/'=>'post/index', //使用home
 			),
 		),
-            
+           
 		// uncomment the following to use a MySQL database
 		'db'=>require(dirname(__FILE__).'/dlfdb.php'),
 		
@@ -75,6 +76,7 @@ return array(
 			// use 'site/error' action to display errors
                  'errorAction'=>'site/error',
         ),
+        /*
 		'log'=>array(
 			'class'=>'CLogRouter',
 			'routes'=>array(
@@ -89,7 +91,7 @@ return array(
 				),
 				
 			),
-		),
+		),*/
 	),
 
 	// application-level parameters that can be accessed

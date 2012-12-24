@@ -8,6 +8,7 @@
 <meta name="description" content="<?php echo $this->settings->description ?>">
 <meta name="Keywords" content="<?php echo $this->settings->keywords ?>">
 <title><?php echo CHtml::encode($this->pageTitle); ?></title>
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/style.css" />
 <link rel="pingback" href="http://www.dlf5.com/xmlrpc.php" />

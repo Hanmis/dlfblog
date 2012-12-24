@@ -1,16 +1,17 @@
 <?php
     $this->widget('ext.ueditor.Ueditor',
             array(
-                'getId'=>'Post_content',
-                'UEDITOR_HOME_URL'=>"/",
-                'options'=>'toolbars:[["fontfamily","fontsize","forecolor","bold","italic","strikethrough","|","insertunorderedlist","insertorderedlist","blockquote","|","link","unlink","highlightcode","|","undo","redo","source"]],
-                 	wordCount:false,
-                 	elementPathEnabled:false,
-                 	imagePath:"",
-                 	initialContent:"",
-                 	',
+                 'getId'=>'Post_content',
+                 'UEDITOR_HOME_URL'=>"/",
+                 'options'=>'toolbars:[["fontfamily","fontsize","forecolor","bold","italic","strikethrough","|","insertunorderedlist","insertorderedlist","blockquote","|","link","unlink","highlightcode","|","undo","redo","source"]],
+                  wordCount:false,
+                 	 elementPathEnabled:false,
+                 	 minFrameHeight:180,  //指定高度
+                 	 imagePath:"",
+                 	 initialContent:"",
+                 	 ',
             ));
-?>
+ ?>
 
 <div class="form">
 
@@ -37,13 +38,11 @@
 		<?php echo CHtml::activeTextArea($model,'summary',array('rows'=>5,'cols'=>89,'style'=>'width: 630px;padding: 5px;')); ?>
 		<?php echo $form->error($model,'summary'); ?>
 	</div>
-
-	<div class="row">
+ 	<div class="row">
 		<?php echo $form->labelEx($model,'content'); ?>
-		<?php echo CHtml::activeTextArea($model,'content',array('rows'=>10, 'cols'=>89)); ?>
+		<?php echo CHtml::activeTextArea($model,'content',array('rows'=>10, 'cols'=>89,)); ?>
 		<?php echo $form->error($model,'content'); ?>
-	</div>
-
+	</div> 
 	<div class="row">
 		<?php echo $form->labelEx($model,'tags'); ?>
 		<?php $this->widget('CAutoComplete', array(
@@ -56,7 +55,6 @@
 		<p class="hint">Please separate different tags with commas.</p>
 		<?php echo $form->error($model,'tags'); ?>
 	</div>
-
 	<div class="row">
 		<?php echo $form->labelEx($model,'status'); ?>
 		<?php echo $form->dropDownList($model,'status',Lookup::items('PostStatus')); ?>
